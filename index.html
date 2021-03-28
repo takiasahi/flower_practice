@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shiro</title>
+  <!-- CSS -->
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <!-- Adobeフォント -->
+  <!-- <link rel="stylesheet" href="https://use.typekit.net/mcx5slv.css"> -->
+  <!-- Adobe無料会員は無かったのでGoogleフォント -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <!-- 独自CSS -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header-wrapper">
+    <div class="header-inner">
+      <h1>Shiro</h1>
+      <!-- ハンバーガー -->
+      <div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+        <nav class="menu-list">
+          <ul>
+            <li><a href="#">Concept</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Florist</a></li>
+            <li><a href="#">Shop infomation</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ファーストビュー -->
+  <section id="fv" class="big-bg">
+    <div class="wrapper">
+      <p class="title">Shiro</p>
+      <p class="sub-title">White flower shop</p>
+    </div>
+  </section>
+
+  <!-- concept コンセプト -->
+  <section id="concept">
+    <div class="wrapper">
+      <h2>Concept</h2>
+      <p class="section-description">
+        私たちShiroは、白いお花だけを取り扱うフラワーショップです。
+        <br class="pc-br">
+        色とりどりの花束も素敵だけれど、洗練された「白」の美しさを感じてほしい。 <br class="pc-br">
+        「白」に対する愛から生まれた静寂な時間が流れる店へ、ぜひお越しください。
+      </p>
+      <div class="img"><img src="img/concept.png" alt=""></div>
+      <!-- レスポンシブ対応のため、空のブロック要素を入れておく -->
+      <div class="space"></div>
+    </div>
+  </section>
+
+  <!-- work 作品紹介 -->
+  <section id="work" class="wrapper">
+    <h2>Work</h2>
+    <p class="section-description">
+      オーダーメイドでのブーケ・アレンジメントのデザインのほか、 
+      <br class="pc-br">
+      ウェディングやイベントの装花なども行なっています。 
+      <br class="pc-br">
+      一人一人にあったご提案をさせていただきます。
+    </p>
+    <div class="work-whole">
+      <div class="work-col">
+        <div class="work-row">
+          <div class="work-gift work-set">
+            <div class="img"><img src="img/work_gift.png" alt=""></div>
+            <h3>Gift</h3>
+            <p>
+              花束をお送りしたいお相手、伝えたいお気持ちに合わせたプレゼント用花束のアレンジメントをさせていただきます。花言葉などの豆知識もお伝えします。
+            </p>
+          </div>
+          <div class="work-wedding work-set">
+            <div class="img"><img src="img/work_wedding.png" alt=""></div>
+            <h3>Wedding</h3>
+            <p>
+              ウエディングドレスに合わせたブーケや式場の雰囲気に合う装花をご提案。お打ち合わせの流れや回数、費用などにつきましてはお問い合わせください。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="work-col">
+        <div class="work-row">
+          <div class="work-decoration work-set">
+            <div class="img"><img src="img/work_decoretion.png" alt=""></div>
+            <h3>Decoration</h3>
+            <p>
+              お写真を彩るお花を一輪から販売。一定期間のご契約で定期的にご自宅へ配送させていただくことも可能です。
+            </p>
+          </div>
+          <div class="work-foryourself work-set">
+            <div class="img"><img src="img/work_for_yourself.png" alt=""></div>
+            <h3>For yourself</h3>
+            <p>
+              お部屋の雰囲気やライフスタイルをお聞きしてご自宅用の花束をご提案し、少しでも長く咲かせるコツもお教えします。花束に合った花瓶をご提案することも可能です。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- florist メンバー紹介 -->
+  <section id="florist">
+    <div class="wrapper">
+      <h2>Florist</h2>
+      <p class="section-description">
+        Shiro専属のフローリストたちをご紹介。 
+        <br>
+        得意の分野であなたのオーダーを最大限に叶えます。
+      </p>
+      <div class="cards">
+        <div class="card">
+          <div><img src="img/florist_shiyu.png" alt=""></div>
+          <h3>Shiyu</h3>
+          <p>お花茶屋大学フラワーアレンジメント科を卒業後、さまざまな白い花を探すために世界を一周し、Shiroの創業者となる。</p>
+        </div>
+        <div class="card">
+          <div><img src="img/florist_mao.png" alt=""></div>
+          <h3>Mao</h3>
+          <p>花の魅力に惹かれ、空間デザインの世界からフローリストの道を歩む。主に結婚式やイベントで使用するお花のディレクション担当。</p>
+        </div>
+        <div class="card">
+          <div><img src="img/florist_omichan.png" alt=""></div>
+          <h3>Omichan</h3>
+          <p>フローリスト兼ガーデナーという特殊な経歴をもつ。豊富な知識と技術でお客様のオーダーを叶える。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- shop infomation お店情報 -->
+  <section id="infomation" class="wrapper">
+    <h2>Shop infomation</h2>
+    <p class="section-description">Shiroの店舗情報をご紹介します。</p>
+    <div class="infomation-content">
+      <div><img src="img/shop_information.png" alt=""></div>
+      <div>
+        <table>
+          <tr>
+            <th>住所</th>
+            <td>〒810-0001<br>福岡県福岡市中央区天神0-0-0</td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td>0120-000-000</td>
+          </tr>
+          <tr>
+            <th>営業時間</th>
+            <td>11:00-20:30<br>（定休日：水曜日）</td>
+          </tr>
+          <tr>
+            <th>アクセス</th>
+            <td>天神駅12a出口から徒歩6分<br>東京駅8b出口から徒歩12分</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact お問い合わせ -->
+  <section id="contact" class="big-bg">
+    <div class="wrapper">
+      <h2>Contact us</h2>
+      <p class="section-description">
+        イベントや結婚式でご利用する装花のご相談や、
+        <br>
+        フラワーアレンジメントのご予約などはこちらからお問い合わせください。
+      </p>
+    </div>
+    <a class="contact-btn" href="#"> 
+      <div class="mail-icon"></div>
+      <p>お問い合わせ</p>
+    </a>
+
+  </section>
+  
+  <!-- フッター -->
+  <footer>
+    <p>Copyright © Shiro All Rights Reserved.</p>
+  </footer>
+
+</body>
+
+</html>

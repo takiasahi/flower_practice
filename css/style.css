@@ -1,0 +1,395 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------------- */
+html {
+  font-size: 62.5%;
+}  
+html * {
+  box-sizing: border-box;
+}  
+body {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  color: #2B2B2B;
+  /* Adobeの代わりにGoogleFonts */
+  /* font-family: poppins, sans-serif; */
+  font-family: 'PT Sans', 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}  
+img {
+  width: 100%;
+  vertical-align: bottom;
+  object-fit: cover;
+}  
+li {
+  list-style: none;
+}  
+a {
+  color: #2B2B2B;
+  text-decoration: none;
+}
+.wrapper {
+  width: min(960px, 90%); /*これで左右paddingを設定しなくても大丈夫*/
+  margin: 0 auto;
+}
+
+/* h2の下のsectionの説明 */
+.section-description {
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  margin-bottom: 40px;
+}
+h1 {
+  color: #fff;
+  /* 本当は36pxだけどGoogleFontsのため調整 */
+  /* font-size: 3.6rem; */
+  font-size: 3.4rem;
+  font-family: 'PT Sans', sans-serif;
+}
+h2 {
+  color: #333333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.6rem;
+  text-align: center;
+}
+h2::after {
+  display: block;
+  content: "";
+  margin: 28px auto 28px auto;
+  width: 40px;
+  height: 1px;
+  background-color: #333333;
+}
+h3 {
+  color: #333333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+  margin-top: 16px;
+}
+/* 大きな背景画像 */
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+
+/* ヘッダー */
+.header-wrapper {
+  width: min(960px, 90%);
+  margin: 0 auto;
+  position: relative;
+}
+.header-inner {
+  position: absolute;
+  width: 100%;
+  height: 64px;
+  top: 40px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+/* ハンバーガーメニュー */
+#menu-btn-check {
+  display: none;
+}
+.menu-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+}
+.menu-btn span, 
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 25px;
+  background-color: #fff;
+  position: absolute;
+}
+.menu-btn span::before {
+  bottom: 8px;
+} 
+.menu-btn span::after {
+  top: 8px;
+}
+/* チェックを付けて×にする */
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255,255,255,0);
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+ /* リスト */
+ .menu-list {
+  width: 100vw;
+  height: 536px;
+  color: #3b3b3b;
+  font-family: 'PT Sans', sans-serif;
+  position: fixed;
+  top: 104px;
+  /* メニューを画面外に置く */
+  right: -100vw;
+  z-index: 80;
+  background-color: #fff;
+  opacity: 0.9;
+  /* transition: all 0.5s; */
+}
+.menu-list ul {
+  display: block;
+  text-align: center;
+}
+.menu-list ul li {
+  border-bottom: #3b3b3b;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #a5a5a5;
+}
+
+/* チェックされた時に位置を戻す */
+#menu-btn-check:checked ~ .menu-list {
+  right: 0;
+}
+
+
+
+/* ファーストビュー */
+#fv {
+  height: 640px;
+  background-image: url(../img/header.png);
+}
+.title {
+  padding-top: 240px;
+  text-align: center;
+  color: #fff;
+  font-family: 'PT Sans', sans-serif;
+  /* 本当は120pxだけどGoogleFontsのため調整 */
+  font-size: 11rem;
+  line-height: 1.2;
+}
+.sub-title {
+  text-align: center;
+  color: #fff;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.6rem;
+}
+.sub-title::before,
+.sub-title::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  margin: 0 8px;
+  background-color: #fff;
+  vertical-align: middle;
+}
+
+/* コンセプト */
+#concept {
+  margin-top: 80px;
+  /* height: 760px; */
+  background: linear-gradient(#fff 66.66%, #EDEDED 33.33%);
+}
+/* 伸縮調整用 */
+.space {
+  width: 100%;
+  height: 80px;
+  opacity: 0;
+} 
+
+
+/* Work */
+#work {
+  margin-top: 80px;
+}
+.work-whole {
+  display: flex;
+  justify-content: space-between;
+}
+.work-col {
+  width: min(420px, 45%);
+  /* max-width: 420px; */
+}
+h3 + p {
+  margin-bottom: 80px;
+}
+/* 右の段は下げる */
+.work-decoration {
+  padding-top: 120px;
+}
+
+/* Florist */
+#florist {
+  padding-top: 80px;
+  background: linear-gradient(#EDEDED 52%, #ffffff 48%);
+}
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  width: 32%;
+}
+.card p {
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* Shop Infomation */
+.infomation-content {
+  display: flex;
+  justify-content: space-between;
+}
+.infomation-content div {
+  width: 47%;
+}
+table {
+  width: 100%;
+  border-spacing: 15px;
+}
+
+table th {
+  width: 25%;
+  text-align: left;
+  vertical-align: top;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: normal;
+  border-right: solid 1px #A0A0A0;
+}
+table td {
+  width: 75%;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* contact */
+#contact {
+  margin-top: 80px;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/contact_us.png);
+  background-size: cover;
+  /* background-image: url(../img/contact_us.png);
+  background-color: #fff;
+  background-blend-mode: hard-light; */
+  height: 450px;
+}
+#contact h2 {
+  padding-top: 80px;
+}
+.contact-btn {
+  display: block;
+  width: 360px;
+  line-height: 80px;
+  margin: 40px auto 99px;
+  border: solid 1px #3b3b3b;
+  background-color: #fff;
+  text-align: center;
+  color: #2B2B2B;
+}
+.mail-icon {
+  display: inline-block;
+  color: #3b3b3b;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+.mail-icon:before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: -7px;
+  width: 1px;
+  height: 20px;
+  background-color: currentColor;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+}
+.mail-icon:after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: -7px;
+  width: 1px;
+  height: 20px;
+  background-color: currentColor;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+.contact-btn p {
+  display: inline-block;
+  margin-left: 2.4rem;
+  color: #2B2B2B;
+  font-size: 2rem;
+}
+
+/* フッター
+------------------------------- */
+footer {
+  text-align: center;
+  padding: 12px 0;
+}
+footer p {
+  color: #3b3b3b;
+}
+
+
+/* レスポンシブ対応 */
+@media screen and (max-width:768px) {
+  /* 改行を無くす */
+  .pc-br {
+    display: none;
+  }
+  /* work */
+  .work-whole {
+    flex-direction: column;
+  }
+  .work-col {
+    width: 100%;
+  }
+  .work-decoration {
+    padding-top: 0;
+  }
+  .work-set {
+    width: 90%;
+  }
+  .work-wedding, .work-foryourself{
+    margin-left: 10%;
+  }
+  /* florist */
+  #florist {
+    background: linear-gradient(#EDEDED 20%, #ffffff 80%);
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+  /* infomation */
+  .infomation-content {
+    flex-direction: column;
+  }
+  .infomation-content div {
+    width: 100%;
+  }
+
+}
